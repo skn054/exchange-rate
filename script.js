@@ -20,9 +20,10 @@ function caclulate(){
 }
 
 function swapFucntion(){
-    const temp = currencyEl_one.value;
-    currencyEl_one.value = currencyEl_two.value;
-    currencyEl_two.value = temp;
+    // const temp = currencyEl_one.value;
+    // currencyEl_one.value = currencyEl_two.value;
+    // currencyEl_two.value = temp;
+    [currencyEl_one.value,currencyEl_two.value] = [currencyEl_two.value,currencyEl_one.value]
     caclulate();
 }
 
@@ -31,7 +32,7 @@ currencyEl_one.addEventListener('change', caclulate);
 amountEl_one.addEventListener('input', caclulate);
 currencyEl_two.addEventListener('change', caclulate);
 swap.addEventListener('click',swapFucntion)
-// amountEl_two.addEventListener('input', caclulate);
+amountEl_two.addEventListener('input', caclulate);
 
 
 
